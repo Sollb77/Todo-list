@@ -25,3 +25,52 @@ input {
     border: none;
     width: 100%;
 }
+
+
+
+body {
+    background-color: rgb(228, 227, 227);
+
+
+}
+
+.completar {
+    list-style: none;
+    border: 0px;
+}
+
+.container {
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 50%;
+    border: 2px solid gray;
+}
+
+.container2 {
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 49%;
+    position: absolute;
+    top: 5px;
+    border: 2px solid gray;
+    height: 150px;
+    z-index: -3;
+}
+
+h1 {
+    color: gray
+}
+
+.cosas {
+    list-style: none;
+
+}
+
+.listas li {
+    border: 1px solid gray;
+    width: 80%;
+}

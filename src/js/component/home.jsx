@@ -1,39 +1,40 @@
-import React, {useState} from "react";
+//import React from 'react';
+import React, {useState} from 'react';
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+//import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
 	const [inputValue, setInputValue] = useState(" ");
-	const [toDoes, settoDoes] = useState(" ");
+	const [toDoes, setToDoes] = useState([]);
 	return (
 		<div className="container">
-			<h1>my Todoes</h1>
-		  <ul>
-			<li><input 
+			<h1>todos</h1>
+		  <ul className='listas'>
+			<li className='completar'><input 
 			type="text" 
 		
-			onChange={()=> setInputValue (e.target.value)}
+			onChange={(e)=> setInputValue (e.target.value)}
 			value={inputValue}
-			onKeyUp ={(e) =>  {
+			onKeyPress ={(e) =>  {
 				if (e.key === "Enter") {
-				settoDoes (toDoes.concat(inputValue));
+				setToDoes (toDoes.concat(inputValue));
 				setInputValue(" ");
 			       }
 				}}
 			placeholder="What do yo need to do?"></input>	
 			</li>
 			{toDoes.map((t,index) => (
-			<li>
+			<li className='cosas'>
             {t}{" "}
 
 				<i class="fas fa-trash-alt"
 				onClick={() =>
-				settoDoes(
+				setToDoes(
 					toDoes.filter(
-						(t,currentInex) =>
-						index != currentInex
+						(t,currentIndex) =>
+						index != currentIndex
 					)
 				)
 				 }></i>
@@ -42,7 +43,9 @@ const Home = () => {
 			))}
 			
 		  </ul>
-		  <div>23 task</div>
+		  <div>{toDoes.length} task</div>
+		  <div className='container2'></div>
+		  <div className='container3'></div>
 		</div>
 	);
 };
