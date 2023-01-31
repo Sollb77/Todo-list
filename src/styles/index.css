@@ -11,6 +11,8 @@
 */
 h1 {
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(160, 125, 130);
 }
 
 
@@ -30,8 +32,9 @@ input {
 
 body {
     background-color: rgb(228, 227, 227);
-
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .completar {
@@ -40,30 +43,22 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
     margin: 5px;
     padding: 5px;
     text-align: center;
-    width: 50%;
-    border: 2px solid gray;
+    width: 800px;
+    height: auto;
+    border: gray;
+    border-style: inset;
 }
 
-.container2 {
-    background-color: white;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    width: 49%;
-    position: absolute;
-    top: 5px;
-    border: 2px solid gray;
-    height: 150px;
-    z-index: -3;
-}
 
-h1 {
-    color: gray
-}
+
+
 
 .cosas {
     list-style: none;
@@ -71,6 +66,15 @@ h1 {
 }
 
 .listas li {
-    border: 1px solid gray;
-    width: 80%;
+    border: 1px solid rgb(210, 209, 209);
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.ult {
+    border-top: solid 1px rgb(160, 125, 130);
+    margin: none;
+    color: rgb(160, 125, 130);
 }

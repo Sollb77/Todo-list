@@ -10,11 +10,12 @@ const Home = () => {
 	const [toDoes, setToDoes] = useState([]);
 	return (
 		<div className="container">
-			<h1>todos</h1>
+			<h1>To do</h1>
 		  <ul className='listas'>
-			<li className='completar'><input 
+			<li className='completar' ><input 
+			
 			type="text" 
-		
+		    
 			onChange={(e)=> setInputValue (e.target.value)}
 			value={inputValue}
 			onKeyPress ={(e) =>  {
@@ -23,13 +24,14 @@ const Home = () => {
 				setInputValue(" ");
 			       }
 				}}
-			placeholder="What do yo need to do?"></input>	
+				placeholder= 'What do yo need to do?'
+			></input>	
 			</li>
 			{toDoes.map((t,index) => (
-			<li className='cosas'>
+			<li className='cosas p-2'>
             {t}{" "}
-
-				<i class="fas fa-trash-alt"
+                    
+				<i class="fas fa-trash-alt p-2"
 				onClick={() =>
 				setToDoes(
 					toDoes.filter(
@@ -43,9 +45,8 @@ const Home = () => {
 			))}
 			
 		  </ul>
-		  <div>{toDoes.length} task</div>
-		  <div className='container2'></div>
-		  <div className='container3'></div>
+		  <div className='ult'>{toDoes.length} task</div>
+		  
 		</div>
 	);
 };
